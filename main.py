@@ -17,8 +17,15 @@ else:
 
 print('Search the reagent with ' + cas_number)
 
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
 # driver = webdriver.Chrome("/usr/local/bin/chromedriver")
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
 driver.implicitly_wait(3)
 window_num = 0
 
