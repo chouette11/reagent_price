@@ -1,8 +1,7 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
-# from selenium.webdriver import ActionChains
-# from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import time
 import sys
@@ -20,9 +19,6 @@ print('Search the reagent with ' + cas_number)
 # driver = webdriver.Chrome()
 # driver = webdriver.Chrome("/usr/local/bin/chromedriver")
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
